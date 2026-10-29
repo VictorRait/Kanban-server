@@ -1,0 +1,41 @@
+{
+	"name": "kanban-server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "tsx watch server.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.3.0",
+			"onFail": "download"
+		}
+	},
+	"type": "module",
+	"dependencies": {
+		"@apollo/server": "^5.5.1",
+		"@as-integrations/express4": "^1.1.2",
+		"@as-integrations/express5": "^1.1.2",
+		"@graphql-tools/schema": "^10.1.1",
+		"cors": "^2.8.6",
+		"express": "^5.2.1",
+		"graphql": "^17.0.2",
+		"graphql-subscriptions": "^3.0.0",
+		"graphql-ws": "^6.2.2",
+		"ws": "^8.21.3"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.19",
+		"@types/express": "^5.0.6",
+		"@types/node": "^26.6.1",
+		"@types/ws": "^8.18.1",
+		"tsx": "^4.23.13",
+		"typescript": "^7.0.2"
+	}
+}
