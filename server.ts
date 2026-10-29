@@ -239,7 +239,7 @@ await server.start();
 
 const allowedOrigins = [
 	"http://localhost:5173",
-	"https://hilarious-lollipop-855ffc.netlify.app/",
+	"https://hilarious-lollipop-855ffc.netlify.app",
 ];
 
 app.use(
