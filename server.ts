@@ -237,11 +237,19 @@ const server = new ApolloServer({
 
 await server.start();
 
-app.use("/graphql", cors<cors.CorsRequest>(), express.json(), expressMiddleware(server));
+const allowedOrigins = ["http://localhost:5173", "https://taskboard-app.netlify.app"];
 
-const PORT = 4000;
+app.use(
+	"/graphql",
+	cors({
+		origin: allowedOrigins,
+	}),
+	express.json(),
+	expressMiddleware(server),
+);
+
+const PORT = process.env.PORT || 4000;
 
 httpServer.listen(PORT, () => {
-	console.log(`🚀 HTTP Server ready at http://localhost:${PORT}/graphql`);
-	console.log(`🚀 WebSocket Server at ws://localhost:${PORT}/graphql`);
+	console.log(`🚀 Server ready on port ${PORT}`);
 });
